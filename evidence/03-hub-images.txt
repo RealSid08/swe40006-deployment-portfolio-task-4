@@ -1,4 +1,4 @@
-Captured: 2026-09-26T19:06:24+10:00
+Captured: 2026-09-26T19:09:47+10:00
 
 $ docker buildx imagetools inspect sidhaarth08/swe40006-task4-starter:1.0.0
 Name:      docker.io/sidhaarth08/swe40006-task4-starter:1.0.0

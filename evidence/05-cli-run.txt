@@ -1,4 +1,4 @@
-Captured: 2026-09-26T19:06:29+10:00
+Captured: 2026-09-26T19:09:52+10:00
 
 $ docker run --rm --read-only --network none --user 501:20 --mount type=bind,src=/Users/sidhaarth/Documents/Swinburne/SWE40006/portfolio-task4/csv-summary/sample,dst=/input,readonly --mount type=bind,src=/Users/sidhaarth/Documents/Swinburne/SWE40006/portfolio-task4/output,dst=/output swe40006-csv-summary:local --input /input/deployments.csv --output /output/summary.json
 Processed 5 deployments; wrote /output/summary.json

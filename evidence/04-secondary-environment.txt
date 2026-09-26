@@ -1,4 +1,4 @@
-Captured: 2026-09-26T19:06:28+10:00
+Captured: 2026-09-26T19:09:51+10:00
 
 $ docker info --format primary engine {{.Name}} {{.ServerVersion}} {{.Architecture}}
 primary engine docker-desktop 29.7.2 aarch64
@@ -9,7 +9,7 @@ secondary engine 34ecfbad6cf5 29.8.1 aarch64
 [exit 0]
 
 $ docker exec swe40006-secondary-daemon docker ps --format {{.Names}} | {{.Status}} | {{.Ports}}
-starter-from-hub | Up 8 seconds | 127.0.0.1:8081->8000/tcp
+starter-from-hub | Up 3 minutes | 127.0.0.1:8081->8000/tcp
 [exit 0]
 
 $ docker exec swe40006-secondary-daemon wget -qO- http://127.0.0.1:8081/health
