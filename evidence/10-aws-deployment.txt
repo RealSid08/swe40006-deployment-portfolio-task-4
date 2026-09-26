@@ -1,0 +1,40 @@
+Captured: 2026-09-26T22:50:15+10:00
+AWS profile: task4-lab; region: us-east-1
+
+$ aws sts get-caller-identity (lab account only)
+877560905830
+
+$ aws cloudformation describe-stacks (status and public URL)
+CREATE_COMPLETE	http://swe400-LoadB-BI84RULhsgD2-1629137022.us-east-1.elb.amazonaws.com/
+
+$ aws ecs describe-services (desired and running tasks)
+ACTIVE	1	1	0
+
+$ aws ecs describe-task-definition (image and platform)
+swe40006-task4-board	256	512	FARGATE	sidhaarth08/swe40006-task4-board:1.1.0
+
+$ aws elbv2 describe-target-health
+172.31.88.234	healthy
+
+$ curl -i http://swe400-LoadB-BI84RULhsgD2-1629137022.us-east-1.elb.amazonaws.com/health
+HTTP/1.1 200 OK
+Date: Sat, 26 Sep 2026 12:50:23 GMT
+Content-Type: application/json
+Content-Length: 16
+Connection: keep-alive
+Server: gunicorn
+
+{"status":"ok"}
+
+$ curl -i http://swe400-LoadB-BI84RULhsgD2-1629137022.us-east-1.elb.amazonaws.com/api/status
+HTTP/1.1 200 OK
+Date: Sat, 26 Sep 2026 12:50:24 GMT
+Content-Type: application/json
+Content-Length: 143
+Connection: keep-alive
+Server: gunicorn
+
+{"environment":"aws-learner-lab","service":"deployment-board","started_at_utc":"2026-09-26T12:48:27+00:00","status":"ready","version":"4.3.1"}
+
+$ curl -o /dev/null -w 'root HTTP %{http_code} from %{remote_ip}\n' http://swe400-LoadB-BI84RULhsgD2-1629137022.us-east-1.elb.amazonaws.com/
+root HTTP 200 from 18.207.64.140

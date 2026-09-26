@@ -1,0 +1,26 @@
+Name:      docker.io/sidhaarth08/swe40006-task4-board:1.1.0
+MediaType: application/vnd.oci.image.index.v1+json
+Digest:    sha256:ce2d56e8309a6c8643e4a2473ffc85778052272f70654648fd91e18b2be4dcf2
+           
+Manifests: 
+  Name:        docker.io/sidhaarth08/swe40006-task4-board:1.1.0@sha256:0694fd63bce732c0bbd1cb8d5da24c5f13d434c4b1cde6be69692839eba45f6e
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/amd64
+               
+  Name:        docker.io/sidhaarth08/swe40006-task4-board:1.1.0@sha256:46153639345ffd7bd9e054a69d7e11f638b94f347c0748bb11204f0c271d52c5
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    linux/arm64
+               
+  Name:        docker.io/sidhaarth08/swe40006-task4-board:1.1.0@sha256:f2000f6b20d77657a826110798669fde025fb0d6ce8111979075b35e350d1d51
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    vnd.docker.reference.digest: sha256:0694fd63bce732c0bbd1cb8d5da24c5f13d434c4b1cde6be69692839eba45f6e
+    vnd.docker.reference.type:   attestation-manifest
+               
+  Name:        docker.io/sidhaarth08/swe40006-task4-board:1.1.0@sha256:c863b7c949f467752cf8918a38cb636ccb4183f8eea9f4e59e6e69bd7eb21628
+  MediaType:   application/vnd.oci.image.manifest.v1+json
+  Platform:    unknown/unknown
+  Annotations: 
+    vnd.docker.reference.digest: sha256:46153639345ffd7bd9e054a69d7e11f638b94f347c0748bb11204f0c271d52c5
+    vnd.docker.reference.type:   attestation-manifest
