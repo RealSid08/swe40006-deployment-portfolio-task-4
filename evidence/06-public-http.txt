@@ -1,0 +1,22 @@
+Captured: 2026-09-26T19:06:29+10:00
+
+$ curl -fsS -I https://sidhaarths-macbook-pro-m5.tailbfc8a9.ts.net/swe40006-task4/
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+date: Sat, 26 Sep 2026 09:06:29 GMT
+server: gunicorn
+content-length: 1601
+[exit 0]
+
+$ curl -fsS https://sidhaarths-macbook-pro-m5.tailbfc8a9.ts.net/swe40006-task4/api/status
+{"environment":"mac","service":"deployment-board","started_at_utc":"2026-09-26T09:02:21+00:00","status":"ready","version":"4.3.0"}
+[exit 0]
+
+$ tailscale funnel status
+
+# Funnel on:
+#     - https://sidhaarths-macbook-pro-m5.tailbfc8a9.ts.net
+
+https://sidhaarths-macbook-pro-m5.tailbfc8a9.ts.net (Funnel on)
+|-- /swe40006-task4 proxy http://127.0.0.1:8082
+[exit 0]

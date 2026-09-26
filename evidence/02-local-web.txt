@@ -1,0 +1,33 @@
+Captured: 2026-09-26T19:06:24+10:00
+
+$ docker ps --filter name=swe40006- --format {{.Names}} | {{.Status}} | {{.Ports}}
+swe40006-secondary-daemon | Up 3 minutes | 2375-2376/tcp
+swe40006-board | Up 4 minutes (healthy) | 127.0.0.1:8082->8000/tcp
+swe40006-starter | Up 18 minutes | 127.0.0.1:8081->8000/tcp
+[exit 0]
+
+$ curl -fsS -i http://127.0.0.1:8081/health
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Sat, 26 Sep 2026 09:06:24 GMT
+Connection: close
+Content-Type: application/json
+Content-Length: 58
+
+{"service":"starter-web","status":"ok","version":"1.0.0"}
+[exit 0]
+
+$ curl -fsS -i http://127.0.0.1:8082/api/status
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Sat, 26 Sep 2026 09:06:24 GMT
+Connection: close
+Content-Type: application/json
+Content-Length: 131
+
+{"environment":"mac","service":"deployment-board","started_at_utc":"2026-09-26T09:02:21+00:00","status":"ready","version":"4.3.0"}
+[exit 0]
+
+$ docker inspect -f {{.Name}} | user={{.Config.User}} | health={{.State.Health.Status}} swe40006-board
+/swe40006-board | user=appuser | health=healthy
+[exit 0]

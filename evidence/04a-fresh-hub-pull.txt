@@ -1,0 +1,30 @@
+1.0.0: Pulling from sidhaarth08/swe40006-task4-starter
+662344ac6e6a: Pulling fs layer
+6b31de1d9a15: Pulling fs layer
+5fd7def37c2f: Pulling fs layer
+30898b97852f: Pulling fs layer
+955131ef3d99: Pulling fs layer
+cf12fa020ec4: Pulling fs layer
+e363695fcb93: Pulling fs layer
+6b9c19a60ad3: Pulling fs layer
+662344ac6e6a: Download complete
+5fd7def37c2f: Download complete
+30898b97852f: Download complete
+955131ef3d99: Download complete
+6b31de1d9a15: Download complete
+cf12fa020ec4: Download complete
+44136fa355b3: Download complete
+6b9c19a60ad3: Download complete
+9c1bf373b085: Download complete
+e363695fcb93: Download complete
+cf12fa020ec4: Pull complete
+e363695fcb93: Pull complete
+662344ac6e6a: Pull complete
+5fd7def37c2f: Pull complete
+30898b97852f: Pull complete
+955131ef3d99: Pull complete
+6b31de1d9a15: Pull complete
+6b9c19a60ad3: Pull complete
+Digest: sha256:0554cfc23ee07fe8efc8cb06f4eb14d767a19db7d3860215879135f5e6f649a4
+Status: Downloaded newer image for sidhaarth08/swe40006-task4-starter:1.0.0
+docker.io/sidhaarth08/swe40006-task4-starter:1.0.0

@@ -1,0 +1,25 @@
+Captured: 2026-09-26T19:06:29+10:00
+
+$ docker run --rm --read-only --network none --user 501:20 --mount type=bind,src=/Users/sidhaarth/Documents/Swinburne/SWE40006/portfolio-task4/csv-summary/sample,dst=/input,readonly --mount type=bind,src=/Users/sidhaarth/Documents/Swinburne/SWE40006/portfolio-task4/output,dst=/output swe40006-csv-summary:local --input /input/deployments.csv --output /output/summary.json
+Processed 5 deployments; wrote /output/summary.json
+[exit 0]
+
+$ cat /Users/sidhaarth/Documents/Swinburne/SWE40006/portfolio-task4/output/summary.json
+{
+  "total_deployments": 5,
+  "by_outcome": {
+    "failed": 1,
+    "success": 4
+  },
+  "by_environment": {
+    "docker-desktop": 2,
+    "mac-public": 1,
+    "secondary-daemon": 1,
+    "staging": 1
+  },
+  "unique_services": [
+    "deployment-board",
+    "starter-web"
+  ]
+}
+[exit 0]

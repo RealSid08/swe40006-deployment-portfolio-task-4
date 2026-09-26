@@ -1,0 +1,6 @@
+service,environment,outcome
+starter-web,docker-desktop,success
+starter-web,secondary-daemon,success
+deployment-board,docker-desktop,success
+deployment-board,mac-public,success
+deployment-board,staging,failed

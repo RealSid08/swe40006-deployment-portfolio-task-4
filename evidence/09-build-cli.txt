@@ -1,0 +1,42 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 263B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12.11-slim
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 73B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 32B done
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.12.11-slim@sha256:47ae396f09c1303b8653019811a8498470603d7ffefc29cb07c88f1f8cb3d19f
+#5 resolve docker.io/library/python:3.12.11-slim@sha256:47ae396f09c1303b8653019811a8498470603d7ffefc29cb07c88f1f8cb3d19f 0.0s done
+#5 DONE 0.0s
+
+#6 [2/4] WORKDIR /app
+#6 CACHED
+
+#7 [3/4] RUN useradd --system --uid 10001 --no-create-home appuser
+#7 CACHED
+
+#8 [4/4] COPY summary.py .
+#8 CACHED
+
+#9 exporting to image
+#9 exporting layers done
+#9 exporting manifest sha256:8a6aa7041766b08973a9b3dab1d499e376e2aa13226645659467cc59ff842054 done
+#9 exporting config sha256:b88f53686af9f7189652299fc123acdafb602169da7fe1e90ae0cdf250493c2b done
+#9 exporting attestation manifest sha256:5086a9bc916f5abf6a7c8b7d43cba1020ada58533172b50187a86c3ee1204c2a done
+#9 exporting manifest list sha256:961ce3330b26a3dd09b801f6bdc647123b7c5961eaf3ef790a52ea126a3b2b84 done
+#9 naming to docker.io/library/swe40006-csv-summary:local done
+#9 unpacking to docker.io/library/swe40006-csv-summary:local done
+#9 DONE 0.0s
