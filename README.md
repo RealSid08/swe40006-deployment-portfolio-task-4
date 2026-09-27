@@ -4,7 +4,7 @@ Three small Python applications demonstrate the four sequential Docker assessmen
 
 Public application: http://swe400-LoadB-BI84RULhsgD2-1629137022.us-east-1.elb.amazonaws.com/
 
-Development, the local runtime checks, and the separate Docker-in-Docker test all ran on this Mac. The public Deployment Board runs from the versioned Docker Hub image on AWS ECS Fargate in the AWS Academy Learner Lab. An AWS Application Load Balancer gives it a stable public HTTP URL. The Raspberry Pi is not used.
+I built and tested the containers on my Mac, including the pull into a second Docker engine. The public Deployment Board runs from the versioned Docker Hub image on AWS ECS Fargate in the AWS Academy Learner Lab. An AWS Application Load Balancer gives it a public HTTP URL.
 
 | Level | Application | Purpose |
 |---|---|---|
@@ -61,11 +61,11 @@ docker run --rm -d --name swe40006-starter -p 127.0.0.1:8081:8000 \
 curl -fsS http://127.0.0.1:8081/health
 ```
 
-Published tags and digests, test output, screenshots, and the public grading URL are documented in the accompanying report. The public deployment has a separate lifecycle from the code repository, so check the URL before grading.
+Published tags, test output, screenshots, and the public grading URL are documented in the accompanying report. The public deployment has a separate lifecycle from the code repository, so check the URL before grading.
 
 ## AWS Learner Lab public deployment
 
-`aws/deployment-board.yaml` defines one ECS Fargate task (0.25 vCPU, 0.5 GiB), a public Application Load Balancer, health checks, restricted task ingress, and seven-day log retention. The load balancer accepts HTTP on port 80 and forwards only to the task's port 8000. Its URL is public without requiring a Tailscale account or this Mac to stay awake. The AWS Academy lab supports only selected regions; this deployment uses `us-east-1` and the lab's pre-created `LabRole`.
+`aws/deployment-board.yaml` defines one ECS Fargate task (0.25 vCPU, 0.5 GiB), a public Application Load Balancer, health checks, restricted task ingress, and seven-day log retention. The load balancer accepts HTTP on port 80 and forwards only to the task's port 8000. Its URL remains available while the AWS stack is running. The AWS Academy lab supports only selected regions; this deployment uses `us-east-1` and the lab's pre-created `LabRole`.
 
 After starting a Learner Lab session and loading its temporary CLI credentials into a local `task4-lab` profile, deploy with the default VPC and two public subnets:
 
