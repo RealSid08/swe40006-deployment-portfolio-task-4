@@ -32,7 +32,7 @@ def main() -> None:
     args = parser.parse_args()
     result = summarise(args.input)
     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
-    print(f"Processed {result['total_deployments']} deployments; wrote {args.output}")
+    print(f"Processed {result['total_deployments']} deployments. Wrote {args.output}")
 
 
 if __name__ == "__main__":
